@@ -172,10 +172,11 @@ const Signup = () => {
     switch (step) {
       case 1:
         isValid = validateStep1();
+        setsetp2Bg(true);
         break;
       case 2:
         isValid = validateStep2();
-        setsetp2Bg(true);
+        setsetp1Bg(true);
         break;
       // case 3:
       //   isValid = validateStep3();
