@@ -147,7 +147,7 @@ const Dashboard = () => {
                     </div>
                   </div>
 
-                  <div className="w-full p-6 mx-auto text-center text-white bg-gradient-to-r from-[#070c44] to-[#422e9d] text-white border rounded-lg shadow-xl xl:p-8">
+                  <div className="w-full p-6 mx-auto text-center text-white bg-gradient-to-r from-[#070c44] to-[#422e9d] border rounded-lg shadow-xl xl:p-8">
                     <i className="fa-solid fa-certificate text-5xl text-purple-500 my-4"></i>
                     <h3 className="mb-2 text-xl md:text-2xl lg:text-2xl font-bold text-left">
                       Team Leader Info
@@ -188,7 +188,7 @@ const Dashboard = () => {
               <div className="max-w-screen-xl px-4 mx-auto text-center ">
                 <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
                   <div className="lg:col-span-2">
-                    <h1 className="my-8 text-left text-2xl font-bold bg-gradient-to-r from-[#070c44] to-[#422e9d] my-5 py-2 px-4 rounded-md text-white shadow-lg">
+                    <h1 className="lg:my-8 text-left text-2xl font-bold bg-gradient-to-r from-[#070c44] to-[#422e9d] my-5 py-2 px-4 rounded-md text-white shadow-lg">
                       Next Classes
                     </h1>
                     <div className="py-6 rounded-lg w-full px-6">
@@ -297,7 +297,7 @@ const Dashboard = () => {
                       </div>
                     </div>
 
-                    <div className="w-full p-6 mx-auto text-center text-white bg-gradient-to-r from-[#070c44] to-[#422e9d] border border-gray-100 rounded-lg shadow shadow-xl border-gray-600 xl:p-8 bg-gray-100  my-6">
+                    <div className="w-full p-6 mx-auto text-center text-white bg-gradient-to-r from-[#070c44] to-[#422e9d] border border-gray-100 rounded-lg shadow hover:shadow-xl hover:border-gray-600 xl:p-8 bg-gray-100  my-6">
                       <i className="fa-solid fa-certificate text-5xl text-[#070c44] my-4"></i>
                       <h3 className="mb-2 text-xl md:text-2xl lg:text-2xl font-bold text-left">
                         Support Info

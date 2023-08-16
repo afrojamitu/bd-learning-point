@@ -238,7 +238,7 @@ const Signup = () => {
       email: formData.gmailAddress,
       password: formData.newPassword,
       area_code: formData.country,
-      mobile_number: formData.phoneNo,
+      mobile_number: formData.whatsappNo,
       referral_code: formData.referenceNo,
     };
 
@@ -296,7 +296,63 @@ const Signup = () => {
                     required
                   />
                 </div>
+                
+                
                 <div className="mb-4">
+                  <label
+                    htmlFor="language"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Language
+                  </label>
+                  <select
+                    id="language"
+                    name="language"
+                    value={formData.language}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-2 rounded-lg border ${"border-gray-300 focus:ring-blue-500 focus:border-blue-500"}`}
+                    required
+                  >
+                    <option value="">Select Language</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="Arabic">Arabic</option>
+                  </select>
+                </div>
+                <div className="mb-4">
+                <label
+                  htmlFor="gmailAddress"
+                  className="block text-gray-700 font-medium mb-2"
+                >
+                  Gmail Address
+                </label>
+                <input
+                  type="email"
+                  id="gmailAddress"
+                  name="gmailAddress"
+                  value={formData.gmailAddress}
+                  onChange={handleInputChange}
+                  className={`w-full px-4 py-2 rounded-lg border ${"border-gray-300 focus:ring-blue-500 focus:border-blue-500"}`}
+                  required
+                />
+              </div>
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-[#442E9E] text-white font-medium rounded-lg hover:bg-blue-600"
+                  onClick={handleNext}
+                >
+                  Next
+                </button>
+              </form>
+            </div>
+          </div>
+        );
+      case 2:
+        return (
+          <div className="max-w-md mx-auto">
+            <form onSubmit={handleSubmit}>
+            <div className="mb-4">
                   <label
                     htmlFor="country"
                     className="block text-gray-700 font-medium mb-2"
@@ -326,44 +382,6 @@ const Signup = () => {
                       ))}
                   </select>
                 </div>
-                
-                <div className="mb-4">
-                  <label
-                    htmlFor="language"
-                    className="block text-gray-700 font-medium mb-2"
-                  >
-                    Language
-                  </label>
-                  <select
-                    id="language"
-                    name="language"
-                    value={formData.language}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-2 rounded-lg border ${"border-gray-300 focus:ring-blue-500 focus:border-blue-500"}`}
-                    required
-                  >
-                    <option value="">Select Language</option>
-                    <option value="English">English</option>
-                    <option value="Spanish">Spanish</option>
-                    <option value="French">French</option>
-                    <option value="Arabic">Arabic</option>
-                  </select>
-                </div>
-                <button
-                  type="button"
-                  className="px-6 py-2 bg-[#442E9E] text-white font-medium rounded-lg hover:bg-blue-600"
-                  onClick={handleNext}
-                >
-                  Next
-                </button>
-              </form>
-            </div>
-          </div>
-        );
-      case 2:
-        return (
-          <div className="max-w-md mx-auto">
-            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   htmlFor="whatsappNo"
@@ -389,23 +407,7 @@ const Signup = () => {
                   />
                 </div>
               </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="gmailAddress"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Gmail Address
-                </label>
-                <input
-                  type="email"
-                  id="gmailAddress"
-                  name="gmailAddress"
-                  value={formData.gmailAddress}
-                  onChange={handleInputChange}
-                  className={`w-full px-4 py-2 rounded-lg border ${"border-gray-300 focus:ring-blue-500 focus:border-blue-500"}`}
-                  required
-                />
-              </div>
+              
               <div className="mb-4 relative">
                 <label
                   htmlFor="newPassword"
@@ -681,9 +683,9 @@ const Signup = () => {
   ) : (
     <>
       <div className="signup-section md:w-10/12 md:mx-auto grid lg:grid-cols-2 gap-10 py-20">
-        <div className="hidden lg:block pt-10 rounded-lg">
+        <div className="hidden lg:block bg-[#442E9E] pt-10 my-10 rounded">
           <div className="flex justify-center items-center flex-col mb-3">
-            <h2 className="text-4xl font-semibold pb-10 text-center ">
+            <h2 className="text-4xl text-white font-semibold pb-7 text-center ">
               Signup Today and Learn More
             </h2>
             <img className="h-[500px] w-full" src={signUp2} alt="" />
@@ -691,8 +693,8 @@ const Signup = () => {
         </div>
 
         <div>
-          <div className="flex justify-center rounded items-center mb-10 mt-10" style={{ boxShadow: '0 0 30px #ccc' }}>
-            <div className="mx-auto grid w-full">
+          <div className="flex justify-center rounded items-center my-10 mx-5" style={{ boxShadow: '0 0 30px #ccc' }}>
+            <div className="md:mx-auto grid w-full">
               <div className="bg-white rounded-lg shadow-lg">
                 <div className="signup_section flex justify-between mb-16 text-center font-semibold">
                   <span

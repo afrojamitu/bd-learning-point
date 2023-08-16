@@ -48,7 +48,7 @@ export default function VerifyButton() {
             You{"'"}re not verified yet!, Get verified and collect your rewards{" "}
           </span>
           <button
-            className="flex gap-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-500 hover:from-10% hover:via-sky-500 hover:via-30% hover:to-emerald-500 hover:to-90% hover:bg-gradient-to-l text-white p-2 rounded-lg px-6"
+            className="flex gap-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-400 hover:from-100% hover:via-sky-500 hover:via-30% hover:to-emerald-500 hover:to-90% hover:bg-gradient-to-l text-white p-2 rounded-lg px-6"
             onClick={handleSubmit}
           >
             {!isLoading ? (
