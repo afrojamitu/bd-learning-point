@@ -1,4 +1,3 @@
-import React from 'react';
 import books from "../../../../assets/home/card-books.svg"
 import teachers from "../../../../assets/home/card-teachers.svg"
 import timer from "../../../../assets/home/card-timer.svg"
@@ -14,7 +13,7 @@ const CardSection = () => {
                         <img src={cardImage} className='w-16' alt='' />
                     </div>
                     <div>
-                        <p className='font-Roboto text-xl'>Our main objective is to make your free time efficient for learning and earning</p>
+                        <p className='font-Roboto text-xl'>Our main objective is to make your free time efficient for learning and earning</p>
                     </div>
                 </div>
                 <div className='flex flex-col lg:grid grid-cols-2'>

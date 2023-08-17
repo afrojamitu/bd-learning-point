@@ -1,4 +1,3 @@
-import React from 'react';
 import HeaderImage from "../../../../assets/home/taxi-online-education-3.gif";
 
 const OurServices = () => {

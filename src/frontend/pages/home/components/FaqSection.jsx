@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import faqImg from '../../../../assets/faq/FAQ.png'
 
 function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -33,41 +34,48 @@ function FAQSection() {
   return (
     <>
       <section className="faq-section">
-        <div className="container mx-auto px-4 py-16 lg:py-40">
+        <div className="container mx-auto px-4 py-16 lg:py-28">
           <h2 className="section-header text-center my-8 text-5xl text-black font-bold uppercase">
             Frequently Asked Questions <br /> (FAQ)
           </h2>
-          <div className="px-4 lg:px-8 xl:px-16 space-y-4">
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                className="border rounded-md overflow-hidden bg-white shadow-sm"
-              >
-                <button
-                  className="flex justify-between items-center w-full p-4 focus:outline-none bg-[#dddddd]"
-                  onClick={() => toggleAccordion(index)}
+          <div className='grid lg:flex items-center gap-0'>
+
+            <div className="px-4 lg:px-8 xl:px-16 space-y-4 lg:w-[60%]">
+              {faqData.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border rounded-md overflow-hidden bg-white shadow-sm"
                 >
-                  <h3 className="text-xl font-medium">{faq.question}</h3>
-                  <svg
-                    className={`w-6 h-6 transition-transform duration-300 transform ${index === activeIndex ? 'rotate-180' : ''
-                      }`}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  <button
+                    className="flex justify-between items-center w-full p-4 focus:outline-none bg-[#dddddd]"
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <path d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {index === activeIndex && (
-                  <div className="px-4 py-2">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+                    <h3 className="text-xl font-medium">{faq.question}</h3>
+                    <svg
+                      className={`w-6 h-6 transition-transform duration-300 transform ${index === activeIndex ? 'rotate-180' : ''
+                        }`}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {index === activeIndex && (
+                    <div className="px-4 py-2">
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            
+            <div className='hidden lg:flex lg:justify-end'>
+              <img className='lg:w-[500px]' src={faqImg} />
+            </div>
           </div>
         </div>
       </section>

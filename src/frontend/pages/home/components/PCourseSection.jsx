@@ -6,11 +6,20 @@ import course4 from "../../../../assets/home/videoediting.jpg";
 import course5 from "../../../../assets/home/dataentry.jpg";
 import course6 from "../../../../assets/home/graphicdesign.jpg";
 import HeaderImage from "../../../../assets/home/flame-1210.gif";
+import redEffect from '../../../../assets/home/red-effect.png'
 
 function PCourseSection() {
   return (
     <>
-      <section className="pcourse-section py-8 lg:py-16 bg-[#112263]">
+      <section className="pcourse-section relative py-8 lg:py-16 bg-[#112263]">
+
+      <div className="hidden md:block absolute -top-36 -left-[450px] rounded-full">
+        <img className="opacity-40" src={redEffect} alt="" />
+      </div>
+      <div className="hidden md:block absolute top-52 -right-[450px] rounded-full">
+        <img className="opacity-40" src={redEffect} alt="" />
+      </div>
+
         <div className="container mx-auto px-4">
           <div className="flex justify-center items-center">
             <img

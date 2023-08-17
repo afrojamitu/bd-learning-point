@@ -360,6 +360,13 @@ tr.borderBg:nth-child(even):hover {
   background-position: center;
   background-size: cover;
 }
+.CardSection,
+.faq-section {
+  background-image: url("./assets/home/heroBg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 
 .single_about_card {

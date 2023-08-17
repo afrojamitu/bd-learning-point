@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Breadcrumb from '../layouts/Breadcrumb.jsx';
 import Pageloader from '../layouts/PageLoader.jsx';
 import faqImage from "../../../assets/faq/faq-section.jpg";
